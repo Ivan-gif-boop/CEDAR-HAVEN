@@ -1,0 +1,528 @@
+/* ==========================================================================
+   CEDAR HAVEN | RESPONSIVE SYSTEM (responsive.css)
+   Ensures seamless sanctuary experience across all devices.
+   Loaded AFTER style.css so overrides take effect.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. MOBILE QA & BASE SAFETY
+   Prevents common small-screen issues and improves touch usability.
+   -------------------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Safe area inset for notched devices (iPhone X+) */
+@supports (padding: max(0px)) {
+  .site-header {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+
+  #mobile-sidebar {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION (base, applies to all screens)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLET & SMALL DESKTOP (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .display-title {
+    font-size: 3.5rem;
+  }
+
+  .section-padding {
+    padding: 6rem 0;
+  }
+
+  /* Desktop nav tightens — still visible */
+  .desktop-nav {
+    gap: 1.5rem;
+  }
+
+  .desktop-nav a {
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+  }
+
+  /* Header padding tightens */
+  .site-header-inner {
+    padding: 0 1.25rem;
+    height: 76px;
+  }
+
+  /* Brand slightly compresses */
+  .brand-name {
+    font-size: 1.375rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Header CTA padding */
+  .header-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE LANDSCAPE / TABLET (max-width: 1023px)
+   Switch to hamburger + slide-in sidebar
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+  /* Hide desktop nav */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show hamburger button */
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* Enable mobile dropdown (slide-down menu) */
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Hide header WhatsApp CTA on mobile (it lives in sidebar) */
+  .header-cta {
+    display: none;
+  }
+
+  /* Sidebar visible on tablet & mobile */
+  #mobile-sidebar {
+    display: flex;
+  }
+
+  /* Improve touch ergonomics and prevent accidental text selection */
+  .sidebar-link,
+  .mobile-menu a,
+  .header-cta,
+  .mobile-cta,
+  .btn-primary,
+  .btn-gold,
+  .btn-outline {
+    min-height: 44px;
+  }
+
+  /* Sidebar links are larger and easier to tap on mobile */
+  .sidebar-link {
+    padding: 1.125rem 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  .sidebar-link .material-symbols-outlined {
+    font-size: 1.375rem;
+  }
+
+  /* Slide-down mobile menu links: bigger tap targets */
+  .mobile-menu a {
+    padding: 0.875rem 0;
+    font-size: 0.875rem;
+  }
+
+  /* Header CTA inside mobile menu */
+  .mobile-menu .mobile-cta {
+    display: flex;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. MOBILE PORTRAIT (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  /* Typography scales down */
+  .display-title {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .italic-creed {
+    font-size: 1.5rem;
+  }
+
+  /* Header height compresses */
+  .site-header-inner {
+    height: 72px;
+    padding: 0 1rem;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Sidebar width on smaller tablets */
+  #mobile-sidebar {
+    width: 300px;
+  }
+
+  /* Hero — disable fixed background (performance) */
+  .hero-section {
+    background-attachment: scroll;
+    min-height: 70vh;
+  }
+
+  /* Gallery grid tighter */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Cards compress */
+  .card {
+    padding: 1.5rem;
+  }
+
+  /* Buttons stack better */
+  .btn-primary,
+  .btn-gold,
+  .btn-outline {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Forms full-width friendly */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Creed banner tighter */
+  .creed-banner {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .creed-banner p {
+    font-size: 1rem;
+  }
+
+  /* Footer adjusts */
+  footer {
+    padding: 3rem 0 1.5rem;
+    font-size: 0.8125rem;
+  }
+
+  footer.site-footer {
+    padding: 2.5rem 0 2rem;
+  }
+
+  /* Section padding reduced */
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+
+  /* Living space card image height */
+  .living-space-card img {
+    height: 360px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. SMALL MOBILE (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  /* Typography scales further */
+  .display-title {
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .italic-creed {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  /* Header — compact */
+  .site-header-inner {
+    height: 68px;
+    padding: 0 0.875rem;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 1.0625rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Sidebar takes most of the screen on small phones */
+  #mobile-sidebar {
+    width: 88vw;
+    max-width: 320px;
+  }
+
+  .sidebar-link {
+    padding: 1rem 1.5rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.14em;
+  }
+
+  /* Primary buttons full-width */
+  .btn-primary,
+  .btn-gold,
+  .btn-outline,
+  .gold-gradient-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Section padding reduced further */
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .section-padding-sm {
+    padding: 2rem 0;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 1.125rem;
+  }
+
+  /* Gallery single-column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Gallery item sizing */
+  .gallery-item {
+    aspect-ratio: 4/5;
+  }
+
+  /* Living space card image */
+  .living-space-card img {
+    height: 280px;
+  }
+
+  /* Cards compress more */
+  .card {
+    padding: 1.25rem;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Inputs easier to tap */
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 0.875rem 0;
+  }
+
+  /* Creed banner */
+  .creed-banner {
+    padding: 3rem 1rem;
+  }
+
+  .creed-banner p {
+    font-size: 0.9375rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2.5rem 0 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Stack horizontal gaps tighter */
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  /* Star rating bigger for touch */
+  .star-rating i {
+    font-size: 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. EXTRA-SMALL MOBILE (max-width: 360px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 360px) {
+  .brand-name {
+    font-size: 0.9375rem;
+    letter-spacing: 0.06em;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  #mobile-sidebar {
+    width: 92vw;
+    max-width: 100%;
+  }
+
+  .sidebar-link {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .display-title {
+    font-size: 1.875rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. LARGE DESKTOP ENHANCEMENTS (min-width: 1440px)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .site-header-inner {
+    max-width: 1400px;
+  }
+
+  .display-title {
+    font-size: 4.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. LANDSCAPE ORIENTATION ON MOBILE (short height)
+   -------------------------------------------------------------------------- */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* Sidebar scrolls, but keeps links reachable */
+  #mobile-sidebar {
+    overflow-y: auto;
+  }
+
+  .sidebar-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Compress header for landscape */
+  .site-header-inner {
+    height: 60px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. HOVER SAFETY (avoid sticky hover on touch devices)
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+  .sidebar-link:hover,
+  .desktop-nav a:hover,
+  .mobile-menu a:hover,
+  .btn-primary:hover,
+  .btn-gold:hover,
+  .btn-outline:hover,
+  .gold-gradient-btn:hover,
+  .card:hover,
+  .gallery-item:hover img,
+  .living-space-card:hover img,
+  .brand:hover .brand-mark {
+    transform: none !important;
+  }
+
+  .sidebar-link:hover {
+    padding-left: 1.75rem;
+  }
+
+  .mobile-menu a:hover {
+    padding-left: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. PRINT STYLES (bonus — clean print of house rules & contact)
+   -------------------------------------------------------------------------- */
+@media print {
+  .site-header,
+  #mobile-sidebar,
+  #mobile-overlay,
+  .mobile-menu,
+  .mobile-menu-btn,
+  footer.site-footer,
+  #lightbox {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+}
