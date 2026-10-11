@@ -226,14 +226,14 @@
 
       setTimeout(function () {
         var responses = [
-          "Warm greetings from Cedar Haven. We've received your note and our desk in Kasarani is attending to your inquiry right away.",
-          "Thank you for contacting Cedar Haven sanctuary. A member of our team is ready to assist you. If your stay requires immediate reservation, you can also reach us directly via WhatsApp (+254 142 202 815).",
-          "We are honored by your interest in Cedar Haven. We ensure complete privacy for all our guests. How may we curate your peaceful stay today?",
+          "Warm greetings from Cedar Haven. We've received your note and one of our team members is attending to your inquiry.",
+          "Thank you for contacting Cedar Haven. A member of our team is ready to assist you. If your stay requires immediate reservation, you can also reach us directly via WhatsApp (+254 142 202 815).",
+          "We are honored by your interest in Cedar Haven. We ensure complete privacy for all our guests. How may we curateyour peaceful stay today?",
           "Thank you for reaching out. We will provide full availability details and coordinate your arrival seamlessly."
         ];
         var reply = responses[Math.floor(Math.random() * responses.length)];
         appendMessage(reply, 'concierge');
-      }, 1000);
+      }, 15);
     }
 
     sendBtn.addEventListener('click', sendMessage);
@@ -300,7 +300,7 @@
 
           showNotification(
             'Thank you, ' + (name || 'Guest') +
-            '. Your message has been routed to our Kasarani host. We will reply promptly.'
+            '. Your message has been routed to our Kasarani host. We will reply .'
           );
 
           contactForm.reset();
