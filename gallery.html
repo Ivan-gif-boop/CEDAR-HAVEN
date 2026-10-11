@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="description" content="Explore the Cedar Haven gallery and discover the warm living spaces, elegant finishes, and peaceful details of our boutique sanctuary in Nairobi.">
-  <meta name="keywords" content="Cedar Haven gallery, Kasarani home, boutique sanctuary photos, Nairobi stay interior, peaceful living space">
-  <meta name="author" content="Cedar Haven">
-  <meta property="og:title" content="Cedar Haven Gallery | Sanctuary Interiors">
-  <meta property="og:description" content="A visual tour of Cedar Haven's tranquil interiors and guest-ready spaces in Kasarani, Nairobi.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#1a3c34">
+  <meta content="Explore the Cedar Haven gallery and discover the warm living spaces, elegant finishes, and peaceful details of our boutique sanctuary in Nairobi." name="description">
+  <meta content="Cedar Haven gallery, Kasarani home, boutique sanctuary photos, Nairobi stay interior, peaceful living space" name="keywords">
+  <meta content="Cedar Haven" name="author">
+  <meta content="Cedar Haven Gallery | Sanctuary Interiors" property="og:title">
+  <meta content="A visual tour of Cedar Haven's tranquil interiors and guest-ready spaces in Kasarani, Nairobi." property="og:description">
+  <meta content="website" property="og:type">
+  <meta content="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" property="og:image">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="#1a3c34" name="theme-color">
   <title>Gallery | Cedar Haven Boutique Sanctuary in Nairobi</title>
-
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -47,7 +45,6 @@
       }
     };
   </script>
-
   <style>
     .font-serif-brand { font-family: 'Libre Caslon Text', serif; }
     .font-sans-brand { font-family: 'Manrope', sans-serif; }
@@ -140,537 +137,607 @@
     }
 
     #lightbox { transition: opacity 0.3s ease; }
+
+    /* Smooth mobile navigation improvements */
+    @media (max-width: 768px) {
+      .sidebar-link {
+        padding: 1.1rem 1.75rem;
+        font-size: 0.875rem;
+      }
+      #mobile-sidebar {
+        width: 300px;
+      }
+    }
   </style>
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body class="bg-surface font-sans-brand text-on-surface flex flex-col min-h-screen selection:bg-secondary/20 selection:text-primary">
-
-<!-- ==================== MOBILE SIDEBAR ==================== -->
-<div id="mobile-overlay" aria-hidden="true"></div>
-
-<aside id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-  <div class="flex items-center justify-between px-6 py-6 border-b border-secondary/25">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="w-11 h-11 rounded-full overflow-hidden border border-secondary/50 shadow-sm flex-shrink-0 bg-primary">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Emblem" class="w-full h-full object-cover">
-      </div>
-      <div class="flex flex-col leading-none">
-        <span class="font-serif-brand text-lg tracking-[0.2em] text-primary font-semibold">CEDAR HAVEN</span>
-        <span class="text-[9px] uppercase tracking-[0.3em] text-secondary font-semibold mt-1">Boutique Sanctuary</span>
-      </div>
-    </a>
-    <button id="sidebar-close" class="w-9 h-9 rounded-full bg-white/70 border border-secondary/40 flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors" aria-label="Close menu">
-      <span class="material-symbols-outlined text-xl">close</span>
-    </button>
-  </div>
-
-  <nav class="flex flex-col flex-1 py-3">
-    <a href="index.html" class="sidebar-link">
-      <span class="material-symbols-outlined">home</span>
-      <span>The Sanctuary</span>
-    </a>
-    <a href="gallery.html" class="sidebar-link active">
-      <span class="material-symbols-outlined">photo_library</span>
-      <span>Gallery</span>
-    </a>
-    <a href="about.html" class="sidebar-link">
-      <span class="material-symbols-outlined">info</span>
-      <span>About</span>
-    </a>
-    <a href="reviews.html" class="sidebar-link">
-      <span class="material-symbols-outlined">star</span>
-      <span>Reviews</span>
-    </a>
-    <a href="house-guidelines.html" class="sidebar-link">
-      <span class="material-symbols-outlined">gavel</span>
-      <span>House Guidelines</span>
-    </a>
-    <a href="contact.html" class="sidebar-link">
-      <span class="material-symbols-outlined">mail</span>
-      <span>Contact</span>
-    </a>
-  </nav>
-
-  <div class="px-6 pb-6 pt-3 border-t border-secondary/25">
-    <a href="https://wa.me/254142202815?text=Hello%20Cedar%20Haven%2C%20I%20would%20like%20to%20inquire%20about%20a%20stay" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 w-full py-3.5 bg-primary text-white rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-md hover:bg-primary-dark transition-colors">
-      <i class="fa-brands fa-whatsapp text-base"></i>
-      <span>Inquire via WhatsApp</span>
-    </a>
-    <p class="text-center text-[10px] tracking-widest uppercase text-primary/50 mt-4">
-      Kasarani · Nairobi · Kenya
-    </p>
-  </div>
-</aside>
-
-<!-- ==================== HEADER ==================== -->
-<header class="sticky top-0 w-full z-50 transition-all" style="background: linear-gradient(135deg, rgba(245, 235, 215, 0.96) 0%, rgba(236, 215, 171, 0.94) 40%, rgba(223, 190, 126, 0.92) 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(197, 160, 89, 0.35); box-shadow: rgba(119, 90, 25, 0.08) 0px 4px 20px -2px;">
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
-
-    <a href="index.html" class="flex items-center gap-3.5 group">
-      <div class="w-11 h-11 rounded-full overflow-hidden border border-secondary/40 shadow-sm flex-shrink-0 bg-primary">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Emblem" class="w-full h-full object-cover">
-      </div>
-      <span class="font-serif-brand text-2xl tracking-[0.18em] uppercase text-primary font-medium group-hover:text-secondary transition-colors duration-300">
-        Cedar Haven
-      </span>
-    </a>
-
-    <nav class="hidden md:flex items-center gap-7 lg:gap-9">
-      <a href="index.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300">THE SANCTUARY</a>
-      <a href="gallery.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary border-b-2 border-secondary pb-0.5">GALLERY</a>
-      <a href="about.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300">ABOUT</a>
-      <a href="reviews.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300">REVIEWS</a>
-      <a href="house-guidelines.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300">HOUSE GUIDELINES</a>
-      <a href="contact.html" class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300">CONTACT</a>
-    </nav>
-
-    <div class="flex items-center gap-4">
-      <a href="https://wa.me/254142202815" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-secondary/60 text-primary text-xs font-semibold tracking-wider hover:bg-secondary hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
-        <span>INQUIRE</span>
+  <!-- ==================== MOBILE SIDEBAR ==================== -->
+  <div aria-hidden="true" id="mobile-overlay"></div>
+  <aside aria-label="Mobile navigation" aria-modal="true" id="mobile-sidebar" role="dialog">
+    <div class="flex items-center justify-between px-6 py-6 border-b border-secondary/25">
+      <a class="flex items-center gap-3" href="index.html">
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-secondary/50 shadow-sm flex-shrink-0 bg-primary">
+          <img alt="Cedar Haven Emblem" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="flex flex-col leading-none">
+          <span class="font-serif-brand text-lg tracking-[0.2em] text-primary font-semibold">CEDAR HAVEN</span>
+          <span class="text-[9px] uppercase tracking-[0.3em] text-secondary font-semibold mt-1">Boutique Sanctuary</span>
+        </div>
       </a>
-      <button id="sidebar-open" class="md:hidden w-11 h-11 rounded-full border border-secondary/60 flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-all shadow-sm" style="background: linear-gradient(135deg, #f7efe1 0%, #ebd7b2 100%);" aria-label="Open Navigation Menu">
-        <span class="material-symbols-outlined text-2xl">menu</span>
+      <button aria-label="Close menu" class="w-9 h-9 rounded-full bg-white/70 border border-secondary/40 flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors" id="sidebar-close">
+        <span class="material-symbols-outlined text-xl">close</span>
       </button>
     </div>
-  </div>
-</header>
-
-<!-- ==================== MAIN GALLERY ==================== -->
-<main class="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20 flex flex-col items-center">
-
-  <!-- Title -->
-  <div class="flex flex-col items-center text-center max-w-3xl mb-14">
-    <h1 class="font-serif-brand text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4" style="font-style: italic; color: rgb(179, 137, 56); text-shadow: rgba(197, 160, 89, 0.15) 0px 1px 2px;">
-      Gallery
-    </h1>
-    <p class="font-sans-brand text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed">
-      Explore the spaces and furnishings of Cedar Haven — our peaceful 1/2 bedroom holiday home in Kasarani, Nairobi.
-    </p>
-  </div>
-
-  <!-- Filter Tabs -->
-  <div class="w-full flex justify-center mb-12">
-    <div class="inline-flex flex-wrap justify-center gap-2 sm:gap-4 p-1.5 rounded-full bg-surface-container/70 border border-black/5" id="gallery-filters">
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-white bg-primary shadow-sm transition-custom" data-filter="all">ALL SPACES</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="living">THE LIVING ROOM</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="bedroom">BEDROOMS</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="kitchen">THE KITCHEN</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="bathroom">THE BATHROOM</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="surroundings">COMPOUND</button>
-    </div>
-  </div>
-
-  <!-- Gallery Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full" id="gallery-grid">
-
-    <!-- Item 1: Living Room Lounge -->
-    <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida/AEtjO1WjoOioyIkO_EzxVvh3ssTQusvEpezCn9JlWrCqZYO2tL2MlOL5hkuWK2vmsKnbOk7v9aF4qFdDqIQl6o8PBRweOdpK-ye0quh-mTiEZDd0OooKk6G8kUcGyEbfoXZ5cVK_qv66kqtGf1LkEEsAokQRM-U-at-NhcwWLQwYoVklYJRqVsrRwtQkfvuNCFPyOxjepQaGf1wAhp1KC_t2KpFFBR-UHPZaJAh7S0qjIaejMM-1PiaOlO4YXrihlEv_gA2tvxWGzm2wt0I" data-category="The Living Room" data-title="Living Room Lounge" data-desc="Modular sofa with fluted accent wall and coffee tables.">
-      <img alt="Living Room Lounge" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WjoOioyIkO_EzxVvh3ssTQusvEpezCn9JlWrCqZYO2tL2MlOL5hkuWK2vmsKnbOk7v9aF4qFdDqIQl6o8PBRweOdpK-ye0quh-mTiEZDd0OooKk6G8kUcGyEbfoXZ5cVK_qv66kqtGf1LkEEsAokQRM-U-at-NhcwWLQwYoVklYJRqVsrRwtQkfvuNCFPyOxjepQaGf1wAhp1KC_t2KpFFBR-UHPZaJAh7S0qjIaejMM-1PiaOlO4YXrihlEv_gA2tvxWGzm2wt0I">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Living Room Lounge</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Modular sofa with fluted accent wall and coffee tables.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 2: Smart TV & Media Area -->
-    <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUFkVrp-1Ew0DjgMu4KHSkTVixwxhi5BOMFYH4I07R8hsekx7bUZshpHyF-WfFFNiSKWbIV1yiFd7DVGPARP-Rk0ijuL2VJzyQX6pgsrWFYpn6dNglTz5xLvhz2Hl_XpcPhc2EDRrcY2ea5v23evYwJeZXQRah8y_luAwAVYAr28K8vOW9r6nmx7CxMaVrJjgFjxrHSnyZkxUPYPDu0bd2tlpl7s3byxrtjlgnye03Hrkj_-n_H3SiDqDY7GnQWlQYwo" data-category="The Living Room" data-title="Smart TV &amp; Media Area" data-desc="Smart TV, fast Wi-Fi, and beverage station.">
-      <img alt="Smart TV &amp; Media Area" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUFkVrp-1Ew0DjgMu4KHSkTVixwxhi5BOMFYH4I07R8hsekx7bUZshpHyF-WfFFNiSKWbIV1yiFd7DVGPARP-Rk0ijuL2VJzyQX6pgsrWFYpn6dNglTz5xLvhz2Hl_XpcPhc2EDRrcY2ea5v23evYwJeZXQRah8y_luAwAVYAr28K8vOW9r6nmx7CxMaVrJjgFjxrHSnyZkxUPYPDu0bd2tlpl7s3byxrtjlgnye03Hrkj_-n_H3SiDqDY7GnQWlQYwo">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Smart TV &amp; Media Area</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Smart TV, fast Wi-Fi, and beverage station.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 3: Modern Lounge & Marble Tables -->
-    <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqB06JuxpU45fB-kw_BYOnvdE3TlXZOAHCb-zknD7BQBdL_kwpXhnxMaU2Udotl8ok2D-vqLQ5GOT2jq3sD4xBeGePkKaT3Gr9m98kt7CmEOp8B5aRa0AtZiYKSxKPWB1V_G_yEVoC5HLhGqvVexwWbauFkdIAc172ekDDSf2rkf0DKLUdLKwpYrqZwvgR1DgZht0MV0ByXB_iljH8X__0Vf6qvM6guKGygndli3gRgQ3mSqRGXsRt0eIJYXUIvqQc8zQ" data-category="The Living Room" data-title="Modern Lounge &amp; Marble Tables" data-desc="Cream sectional sofa, nested marble coffee tables, and sheer curtain light.">
-      <img alt="Modern Lounge &amp; Marble Tables" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqB06JuxpU45fB-kw_BYOnvdE3TlXZOAHCb-zknD7BQBdL_kwpXhnxMaU2Udotl8ok2D-vqLQ5GOT2jq3sD4xBeGePkKaT3Gr9m98kt7CmEOp8B5aRa0AtZiYKSxKPWB1V_G_yEVoC5HLhGqvVexwWbauFkdIAc172ekDDSf2rkf0DKLUdLKwpYrqZwvgR1DgZht0MV0ByXB_iljH8X__0Vf6qvM6guKGygndli3gRgQ3mSqRGXsRt0eIJYXUIvqQc8zQ">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Modern Lounge &amp; Marble Tables</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Cream sectional sofa, nested marble coffee tables, and sheer curtain light.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 4: Master Bedroom -->
-    <div class="gallery-item bedroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida/AEtjO1WvA-7aBwdxAqbQGqJKLUWlB5gsvUFIu9D_Rt_yiSDuIX-DsxK3sKivzdG4BYExuVsXWQPXD2fWI_wicn6-S1jCbZWd2nKWZEi1WR6O1mO6EV-n5nATilNbNqAp0u67RXpo9zXTWZDfwfW6Fq41cupcsdlb3ymugBpxr5PQKFvj3dAx46GZrXiYK8YSqNTSPFGFn97jFbCn_3Nk1miCbIInA7lsPLPBzf6ie5zJhM99Gwcai0yF1QBwdd3TH9Ve1DhnlDrfHk3ghA" data-category="Bedrooms" data-title="Master Bedroom" data-desc="Plush velvet headboard with fresh white bedding.">
-      <img alt="Master Bedroom" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WvA-7aBwdxAqbQGqJKLUWlB5gsvUFIu9D_Rt_yiSDuIX-DsxK3sKivzdG4BYExuVsXWQPXD2fWI_wicn6-S1jCbZWd2nKWZEi1WR6O1mO6EV-n5nATilNbNqAp0u67RXpo9zXTWZDfwfW6Fq41cupcsdlb3ymugBpxr5PQKFvj3dAx46GZrXiYK8YSqNTSPFGFn97jFbCn_3Nk1miCbIInA7lsPLPBzf6ie5zJhM99Gwcai0yF1QBwdd3TH9Ve1DhnlDrfHk3ghA">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Bedrooms</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Master Bedroom</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Plush velvet headboard with fresh white bedding.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 5: Bedroom & Accent Wall -->
-    <div class="gallery-item bedroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvOsrhx8kKTzyI9EHYCcAiuhJ-kZnxNeJqw1WmmqtSFP2TsPCdKcTxaouHzSPv77KXEHPvodIEz2bPbpsrfJM7WK75aXa0beCXlMZkkn39O8LPbVmrRg3oY228y8Nr7lakvv7vdrAnskxu0AQ2E89HoYO7vlPa3tR7vH_5IXJCbLF7AuuIzduzHH_VlXWNKs_5v9jDZrwOZ25Vl2UEcJjl5vodjnB_41r28WdYOZL4fjBtOTrzcDsk5ALunEozeYi2LMI" data-category="Bedrooms" data-title="Bedroom &amp; Accent Wall" data-desc="Striped feature wall with bedside lamp and fresh towels.">
-      <img alt="Bedroom &amp; Accent Wall" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvOsrhx8kKTzyI9EHYCcAiuhJ-kZnxNeJqw1WmmqtSFP2TsPCdKcTxaouHzSPv77KXEHPvodIEz2bPbpsrfJM7WK75aXa0beCXlMZkkn39O8LPbVmrRg3oY228y8Nr7lakvv7vdrAnskxu0AQ2E89HoYO7vlPa3tR7vH_5IXJCbLF7AuuIzduzHH_VlXWNKs_5v9jDZrwOZ25Vl2UEcJjl5vodjnB_41r28WdYOZL4fjBtOTrzcDsk5ALunEozeYi2LMI">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Bedrooms</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Bedroom &amp; Accent Wall</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Striped feature wall with bedside lamp and fresh towels.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 6: Equipped Kitchen -->
-    <div class="gallery-item kitchen group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida/AEtjO1VB9RFJCIF80V92SKAJYEPE95rTOUNAB3uJ2LiKie6fRZzF_eVaKTBjtPqMPpcGhjWKWz9mAYONGiBF22nbZjHJpKx_NhyIXQmL2ABMbKzosb3Orp99f3vw1zSfpDl7HASo6cbgln3Py0huGrFbk4YvNOqAlvO3qnpydHCXvV32F5_zHUeo05LriVFZiv0zCWvOyUgj424F9aSfUvAqwZ3jaWbM2QDsttUqzzPYSkFPbL8deLRRVS5J60mhEyyQPVJ5Ik34rGmjVCY" data-category="The Kitchen" data-title="Equipped Kitchen" data-desc="Gas cooker, oven, granite counters, and cookware.">
-      <img alt="Equipped Kitchen" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VB9RFJCIF80V92SKAJYEPE95rTOUNAB3uJ2LiKie6fRZzF_eVaKTBjtPqMPpcGhjWKWz9mAYONGiBF22nbZjHJpKx_NhyIXQmL2ABMbKzosb3Orp99f3vw1zSfpDl7HASo6cbgln3Py0huGrFbk4YvNOqAlvO3qnpydHCXvV32F5_zHUeo05LriVFZiv0zCWvOyUgj424F9aSfUvAqwZ3jaWbM2QDsttUqzzPYSkFPbL8deLRRVS5J60mhEyyQPVJ5Ik34rGmjVCY">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Kitchen</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Equipped Kitchen</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Gas cooker, oven, granite counters, and cookware.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 7: Marble Vanity & Shower -->
-    <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida/AEtjO1V240cOnyYHXxov2D5GrA3qZglbigHzL5ualjdus9b0HWS873kwyHXo5GSRlW7RAIk50JCRCIcRphsMHXB0NUeqajF-g_gr__qhJANauU3pmxV3ypMMlLX6lWfiCSGi3PFXhNelRPDAQYg-ooxdlaRfrNgOUQ8mu1LpDl0shE5Gx-yRd0quYroUYgnexrKqVNATmBjqBCFbXkmK-Stk9F_fiAg9nZ8p8hYqTSFx3Nx55TCTcCBYvAur4QWhvv-Dwu2R-1VwCWMF8Q" data-category="The Bathroom" data-title="Marble Vanity &amp; Shower" data-desc="Gold-veined marble walls with vanity sink and shower.">
-      <img alt="Marble Vanity &amp; Shower" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V240cOnyYHXxov2D5GrA3qZglbigHzL5ualjdus9b0HWS873kwyHXo5GSRlW7RAIk50JCRCIcRphsMHXB0NUeqajF-g_gr__qhJANauU3pmxV3ypMMlLX6lWfiCSGi3PFXhNelRPDAQYg-ooxdlaRfrNgOUQ8mu1LpDl0shE5Gx-yRd0quYroUYgnexrKqVNATmBjqBCFbXkmK-Stk9F_fiAg9nZ8p8hYqTSFx3Nx55TCTcCBYvAur4QWhvv-Dwu2R-1VwCWMF8Q">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Marble Vanity &amp; Shower</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Gold-veined marble walls with vanity sink and shower.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 8: Restroom -->
-    <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida/AEtjO1Uf5PBkBbVopl_GGfEhGe65Rt6zxgggKd4Hn86_unwwLlQNXV8RHeQ9eD1zQ-GQ3oxelSVnowDYTLWD2ufAq_mhZEHLmAi59LDSfFgzaHE5JmxSilDuQWoVea8KhxF7SMYVk0OS5dBAZmoMgIqmGsOoRPv6MnI3HX_vEvqs0K4FlbbqT_h9y3UB6cWvyo8LCR1DYcFT8G5gCHGyVuI2YipC6M5T3XSU6vo3HaZuu3ZGrfJhKeO2Qb_eb6FxKFTLK4qJJYaG4wYnTfQ" data-category="The Bathroom" data-title="Restroom" data-desc="Clean modern toilet with marble porcelain finish.">
-      <img alt="Restroom" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uf5PBkBbVopl_GGfEhGe65Rt6zxgggKd4Hn86_unwwLlQNXV8RHeQ9eD1zQ-GQ3oxelSVnowDYTLWD2ufAq_mhZEHLmAi59LDSfFgzaHE5JmxSilDuQWoVea8KhxF7SMYVk0OS5dBAZmoMgIqmGsOoRPv6MnI3HX_vEvqs0K4FlbbqT_h9y3UB6cWvyo8LCR1DYcFT8G5gCHGyVuI2YipC6M5T3XSU6vo3HaZuu3ZGrfJhKeO2Qb_eb6FxKFTLK4qJJYaG4wYnTfQ">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Restroom</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Clean modern toilet with marble porcelain finish.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 9: Private Courtyard -->
-    <div class="gallery-item surroundings group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGOrH_92WJzp53CNA3l_DrtNlFmtMoJaci43-OgA9WkFTU0LVshNneNQNHn8dwFwVH89w9ZjB9nNQH99u11iaK6y1Pi0qpxe71Vlix3UgKHYPftu9kKVQyAH4yYFc-w2tOB4F9lbCI3qx3NP_0Sr1_IcD7ngq99efh884MJTIxuUtAwmAkV07fLSG7ytjuRPoQRO5hOKRYxpxG8LFpY9uEdlLAbO5laWPdI5pw7jfToaLdcCQQLe3LcCZYflmpJxN7MTA" data-category="Compound" data-title="Private Courtyard" data-desc="Quiet paved compound surrounded by trees.">
-      <img alt="Private Courtyard" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGOrH_92WJzp53CNA3l_DrtNlFmtMoJaci43-OgA9WkFTU0LVshNneNQNHn8dwFwVH89w9ZjB9nNQH99u11iaK6y1Pi0qpxe71Vlix3UgKHYPftu9kKVQyAH4yYFc-w2tOB4F9lbCI3qx3NP_0Sr1_IcD7ngq99efh884MJTIxuUtAwmAkV07fLSG7ytjuRPoQRO5hOKRYxpxG8LFpY9uEdlLAbO5laWPdI5pw7jfToaLdcCQQLe3LcCZYflmpJxN7MTA">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Compound</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Private Courtyard</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Quiet paved compound surrounded by trees.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 10: Gated Parking & Entry -->
-    <div class="gallery-item surroundings group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuATjkaFTJz6jKc-qGq42etNQ8taWVwmar1mceMuvaFQPDzGnosiDUuRw7as2DV_eysgxwUi-2kgT0Ip1L7TlHQudu4rbP2sQlvSpq4WGn0bG59MaSFB4iZT7rO7W_pDeInmOwp7RbhA2apE_pJZiDGVLDMXy8ds-vIm1WkljZJzxI0-iEBuZKNyCvggOUX7Zaq-rMUr1czUfnIvsm_3TBVipgNb1wUPVjIcZlPcvK_BDpzcWunAaVrA4xUpBGXgnyvXaMM" data-category="Compound" data-title="Gated Parking &amp; Entry" data-desc="Secure perimeter wall and spacious parking area.">
-      <img alt="Gated Parking &amp; Entry" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATjkaFTJz6jKc-qGq42etNQ8taWVwmar1mceMuvaFQPDzGnosiDUuRw7as2DV_eysgxwUi-2kgT0Ip1L7TlHQudu4rbP2sQlvSpq4WGn0bG59MaSFB4iZT7rO7W_pDeInmOwp7RbhA2apE_pJZiDGVLDMXy8ds-vIm1WkljZJzxI0-iEBuZKNyCvggOUX7Zaq-rMUr1czUfnIvsm_3TBVipgNb1wUPVjIcZlPcvK_BDpzcWunAaVrA4xUpBGXgnyvXaMM">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Compound</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Gated Parking &amp; Entry</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Secure perimeter wall and spacious parking area.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 11: Dining & Work Corner -->
-    <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwTStALJTyyWf4DKBuqI8eienQjTWGbij6tJXbW70yhn5oYeBkKrkuPC_eTIn2Xg_fiLN8Y6KI8yq0kYL6raUIh4gkGLjhq-pm3qvsVPiekYm5EkXibhjeNFZVPr2e00kL8ouz029jxX6UeNUNJLRa6OenpSK58uNISurTRD89TCjWFZuSBiuHqyEloz-SrA3mkwkmvlONAJXEE75pEaVmyClqiaZ-9JCvlyX-O81uiG0wapLEshbCB65mL3K3gzatoj0" data-category="The Living Room" data-title="Dining &amp; Work Corner" data-desc="Glass table with gold accent legs, cozy armchairs, and geometric rug.">
-      <img alt="Dining &amp; Work Corner" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwTStALJTyyWf4DKBuqI8eienQjTWGbij6tJXbW70yhn5oYeBkKrkuPC_eTIn2Xg_fiLN8Y6KI8yq0kYL6raUIh4gkGLjhq-pm3qvsVPiekYm5EkXibhjeNFZVPr2e00kL8ouz029jxX6UeNUNJLRa6OenpSK58uNISurTRD89TCjWFZuSBiuHqyEloz-SrA3mkwkmvlONAJXEE75pEaVmyClqiaZ-9JCvlyX-O81uiG0wapLEshbCB65mL3K3gzatoj0">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Dining &amp; Work Corner</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Glass table with gold accent legs, cozy armchairs, and geometric rug.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 12: Kitchenette & Refrigeration -->
-    <div class="gallery-item kitchen group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2x5EKlZybgCzalkxD2ztkwB4kjPfWQUUqbcAHJ7I99CUg8BZ-afpivUE-S_SoTY1D7aEOdWdlmH5WKOTEQjqqJh4FLjg8g_ywXh2ELb3DRRuLSl9q7-vzMN_zeEYtP9Y5Rj-d00hKjcgHvNfBabybfUOOrxbEr8MsxU0XPKlV7RWG4NpApAw0rK7mbjHWpd8xBFqr8pFkZTqnzRMd4NLPgfHdHvwG2vxu7hXNs6GJk7wO-QZjVw7hVqmBvP5LNQxO0lE" data-category="The Kitchen" data-title="Kitchenette &amp; Refrigeration" data-desc="Silver refrigerator, prep cabinetry, microwave, and open shelving.">
-      <img alt="Kitchenette &amp; Refrigeration" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2x5EKlZybgCzalkxD2ztkwB4kjPfWQUUqbcAHJ7I99CUg8BZ-afpivUE-S_SoTY1D7aEOdWdlmH5WKOTEQjqqJh4FLjg8g_ywXh2ELb3DRRuLSl9q7-vzMN_zeEYtP9Y5Rj-d00hKjcgHvNfBabybfUOOrxbEr8MsxU0XPKlV7RWG4NpApAw0rK7mbjHWpd8xBFqr8pFkZTqnzRMd4NLPgfHdHvwG2vxu7hXNs6GJk7wO-QZjVw7hVqmBvP5LNQxO0lE">
-      <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full">
-      </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-        <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Kitchen</span>
-        <h3 class="font-serif-brand text-2xl text-white mb-2">Kitchenette &amp; Refrigeration</h3>
-        <p class="text-xs text-white/80 line-clamp-2">Silver refrigerator, prep cabinetry, microwave, and open shelving.</p>
-        <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
-          <span>Enlarge View</span>
-          <span class="material-symbols-outlined text-sm">fullscreen</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- CTA Card -->
-  <div class="w-full mt-20 p-8 sm:p-12 rounded-3xl bg-primary text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl" style="background-color: #1a3c34; border: 1px solid rgba(197, 160, 89, 0.25);">
-    <div class="max-w-xl text-center md:text-left">
-      <h2 class="font-serif-brand text-3xl sm:text-4xl font-normal tracking-tight text-white mb-3" style="font-style: italic; color: #e9c176;">
-        Ready to plan your peaceful stay?
-      </h2>
-      <p class="text-sm sm:text-base text-white/80 font-normal leading-relaxed">
-        Reach out directly to book your dates or negotiate terms with our concierge. Located in a tranquil, secure area of Kasarani, Nairobi.
+    <nav class="flex flex-col flex-1 py-3">
+      <a class="sidebar-link" href="index.html">
+        <span class="material-symbols-outlined">home</span>
+        <span class="">The Sanctuary</span>
+      </a>
+      <a class="sidebar-link active" href="gallery.html">
+        <span class="material-symbols-outlined">photo_library</span>
+        <span class="">Gallery</span>
+      </a>
+      <a class="sidebar-link" href="about.html">
+        <span class="material-symbols-outlined">info</span>
+        <span class="">About</span>
+      </a>
+      <a class="sidebar-link" href="reviews.html">
+        <span class="material-symbols-outlined">star</span>
+        <span class="">Reviews</span>
+      </a>
+      <a class="sidebar-link" href="house-guidelines.html">
+        <span class="material-symbols-outlined">gavel</span>
+        <span class="">House Guidelines</span>
+      </a>
+      <a class="sidebar-link" href="contact.html">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="">Contact</span>
+      </a>
+    </nav>
+    <div class="px-6 pb-6 pt-3 border-t border-secondary/25">
+      <a class="flex items-center justify-center gap-2.5 w-full py-3.5 bg-primary text-white rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-md hover:bg-primary-dark transition-colors" href="https://wa.me/254142202815?text=Hello%20Cedar%20Haven%2C%20I%20would%20like%20to%20inquire%20about%20a%20stay" rel="noopener noreferrer" target="_blank">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span class="">Inquire via WhatsApp</span>
+      </a>
+      <p class="text-center text-[10px] tracking-widest uppercase text-primary/50 mt-4">
+        Kasarani · Nairobi · Kenya
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0 w-full sm:w-auto">
-      <a href="https://wa.me/254142202815" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-secondary hover:bg-secondary-gold text-primary font-semibold text-xs tracking-wider transition-all duration-300 shadow-lg">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>RESERVE VIA WHATSAPP</span>
+  </aside>
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 w-full z-50 transition-all" style="background: linear-gradient(135deg, rgba(245, 235, 215, 0.96) 0%, rgba(236, 215, 171, 0.94) 40%, rgba(223, 190, 126, 0.92) 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(197, 160, 89, 0.35); box-shadow: rgba(119, 90, 25, 0.08) 0px 4px 20px -2px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+      <a class="flex items-center gap-3.5 group" href="index.html">
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-secondary/40 shadow-sm flex-shrink-0 bg-primary">
+          <img alt="Cedar Haven Emblem" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <span class="font-serif-brand text-2xl tracking-[0.18em] uppercase text-primary font-medium group-hover:text-secondary transition-colors duration-300">
+          Cedar Haven
+        </span>
       </a>
-      <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider transition-all duration-300">
-        <span>CONTACT DETAILS</span>
-      </a>
-    </div>
-  </div>
-
-</main>
-
-<!-- ==================== LIGHTBOX ==================== -->
-<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8">
-  <button id="lightbox-close" class="absolute top-6 right-6 sm:top-8 sm:right-8 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 hover:text-secondary flex items-center justify-center transition-colors z-20" aria-label="Close modal">
-    <span class="material-symbols-outlined text-2xl">close</span>
-  </button>
-  <div class="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center justify-center">
-    <img id="lightbox-img" alt="Enlarged view" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl">
-    <div class="mt-4 text-center text-white">
-      <span id="lightbox-cat" class="text-xs uppercase tracking-widest text-secondary block font-medium"></span>
-      <h4 id="lightbox-title" class="font-serif-brand text-xl sm:text-2xl mt-1" style="font-style: italic; color: #e9c176;"></h4>
-      <p id="lightbox-desc" class="text-xs text-white/70 mt-1 max-w-lg mx-auto font-sans-brand"></p>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="w-full py-12 mt-auto border-t border-secondary/40 shadow-inner" style="background: linear-gradient(135deg, #f5ebd7 0%, #ecd7ab 35%, #dfbe7e 75%, #cfab63 100%);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-
-    <div class="flex items-center gap-4">
-      <div class="w-9 h-9 rounded-full overflow-hidden border border-primary/30 flex-shrink-0 shadow-sm">
-        <img src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28" alt="Cedar Haven Emblem" class="w-full h-full object-cover">
-      </div>
-      <div class="flex flex-col">
-        <span class="font-serif-brand text-lg tracking-wider uppercase text-primary font-bold">Cedar Haven</span>
-        <span class="text-xs text-primary/80 font-sans-brand font-medium">© 2026. All rights reserved.</span>
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9">
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300" href="index.html">THE SANCTUARY</a>
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary border-b-2 border-secondary pb-0.5" href="gallery.html">GALLERY</a>
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300" href="about.html">ABOUT</a>
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300" href="reviews.html">REVIEWS</a>
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300" href="house-guidelines.html">HOUSE GUIDELINES</a>
+        <a class="font-sans-brand text-xs font-semibold tracking-[0.16em] uppercase text-primary/70 hover:text-secondary transition-colors duration-300" href="contact.html">CONTACT</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-secondary/60 text-primary text-xs font-semibold tracking-wider hover:bg-secondary hover:text-white transition-all duration-300" href="https://wa.me/254142202815" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
+          <span class="">INQUIRE</span>
+        </a>
+        <button aria-label="Open Navigation Menu" class="md:hidden w-11 h-11 rounded-full border border-secondary/60 flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-all shadow-sm" id="sidebar-open" style="background: linear-gradient(135deg, #f7efe1 0%, #ebd7b2 100%);">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
       </div>
     </div>
-
-    <div class="flex items-center gap-6 text-xs text-primary/90 font-sans-brand font-medium">
-      <a href="contact.html" class="hover:text-primary hover:underline transition-colors">Kasarani, Nairobi</a>
-      <span class="text-primary/50">•</span>
-      <a href="https://wa.me/254142202815" class="hover:text-primary hover:underline transition-colors font-semibold">+254 142 202 815</a>
+  </header>
+  <!-- ==================== MAIN GALLERY ==================== -->
+  <main class="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20 flex flex-col items-center">
+    <!-- Title -->
+    <div class="flex flex-col items-center text-center max-w-3xl mb-14">
+      <h1 class="font-serif-brand text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4" style="font-style: italic; color: rgb(179, 137, 56); text-shadow: rgba(197, 160, 89, 0.15) 0px 1px 2px;">
+        Gallery
+      </h1>
+      <p class="font-sans-brand text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed">
+        Explore the spaces and furnishings of Cedar Haven — our peaceful 1/2 bedroom holiday home in Kasarani, Nairobi.
+      </p>
     </div>
-
-    <div class="flex items-center gap-4">
-      <a href="https://www.tiktok.com/@cedar.haven.kasar?_r=1&amp;_t=ZS-9A3sqwBTc3u" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" aria-label="TikTok">
-        <i class="fa-brands fa-tiktok text-sm"></i>
-      </a>
-      <a href="https://www.instagram.com/cedar.haven_" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" aria-label="Instagram">
-        <i class="fa-brands fa-instagram text-sm"></i>
-      </a>
-      <a href="https://wa.me/254142202815" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp text-sm"></i>
-      </a>
-      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cedar.haven.ke@gmail.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" aria-label="Email Cedar Haven">
-        <span class="material-symbols-outlined text-sm">mail</span>
-      </a>
+    <!-- Filter Tabs -->
+    <div class="w-full flex justify-center mb-12">
+      <div class="inline-flex flex-wrap justify-center gap-2 sm:gap-4 p-1.5 rounded-full bg-surface-container/70 border border-black/5" id="gallery-filters">
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-white bg-primary shadow-sm transition-custom" data-filter="all">ALL SPACES</button>
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="living">THE LIVING ROOM</button>
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="bedroom">BEDROOMS</button>
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="kitchen">THE KITCHEN</button>
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="bathroom">THE BATHROOM</button>
+        <button class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-on-surface-variant hover:text-primary hover:bg-white/60 transition-custom" data-filter="surroundings">COMPOUND</button>
+      </div>
+    </div>
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full" id="gallery-grid">
+      <!-- Item 1: Living Room Lounge -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Modular sofa with fluted accent wall and coffee tables." data-src="https://lh3.googleusercontent.com/aida/AEtjO1WjoOioyIkO_EzxVvh3ssTQusvEpezCn9JlWrCqZYO2tL2MlOL5hkuWK2vmsKnbOk7v9aF4qFdDqIQl6o8PBRweOdpK-ye0quh-mTiEZDd0OooKk6G8kUcGyEbfoXZ5cVK_qv66kqtGf1LkEEsAokQRM-U-at-NhcwWLQwYoVklYJRqVsrRwtQkfvuNCFPyOxjepQaGf1wAhp1KC_t2KpFFBR-UHPZaJAh7S0qjIaejMM-1PiaOlO4YXrihlEv_gA2tvxWGzm2wt0I" data-title="Living Room Lounge">
+        <img alt="Living Room Lounge" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WjoOioyIkO_EzxVvh3ssTQusvEpezCn9JlWrCqZYO2tL2MlOL5hkuWK2vmsKnbOk7v9aF4qFdDqIQl6o8PBRweOdpK-ye0quh-mTiEZDd0OooKk6G8kUcGyEbfoXZ5cVK_qv66kqtGf1LkEEsAokQRM-U-at-NhcwWLQwYoVklYJRqVsrRwtQkfvuNCFPyOxjepQaGf1wAhp1KC_t2KpFFBR-UHPZaJAh7S0qjIaejMM-1PiaOlO4YXrihlEv_gA2tvxWGzm2wt0I">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Living Room Lounge</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Modular sofa with fluted accent wall and coffee tables.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 2: Smart TV & Media Area -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Smart TV, fast Wi-Fi, and beverage station." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUFkVrp-1Ew0DjgMu4KHSkTVixwxhi5BOMFYH4I07R8hsekx7bUZshpHyF-WfFFNiSKWbIV1yiFd7DVGPARP-Rk0ijuL2VJzyQX6pgsrWFYpn6dNglTz5xLvhz2Hl_XpcPhc2EDRrcY2ea5v23evYwJeZXQRah8y_luAwAVYAr28K8vOW9r6nmx7CxMaVrJjgFjxrHSnyZkxUPYPDu0bd2tlpl7s3byxrtjlgnye03Hrkj_-n_H3SiDqDY7GnQWlQYwo" data-title="Smart TV &amp; Media Area">
+        <img alt="Smart TV &amp; Media Area" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUFkVrp-1Ew0DjgMu4KHSkTVixwxhi5BOMFYH4I07R8hsekx7bUZshpHyF-WfFFNiSKWbIV1yiFd7DVGPARP-Rk0ijuL2VJzyQX6pgsrWFYpn6dNglTz5xLvhz2Hl_XpcPhc2EDRrcY2ea5v23evYwJeZXQRah8y_luAwAVYAr28K8vOW9r6nmx7CxMaVrJjgFjxrHSnyZkxUPYPDu0bd2tlpl7s3byxrtjlgnye03Hrkj_-n_H3SiDqDY7GnQWlQYwo">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Smart TV &amp; Media Area</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Smart TV, fast Wi-Fi, and beverage station.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 3: Modern Lounge & Marble Tables -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Cream sectional sofa, nested marble coffee tables, and sheer curtain light." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqB06JuxpU45fB-kw_BYOnvdE3TlXZOAHCb-zknD7BQBdL_kwpXhnxMaU2Udotl8ok2D-vqLQ5GOT2jq3sD4xBeGePkKaT3Gr9m98kt7CmEOp8B5aRa0AtZiYKSxKPWB1V_G_yEVoC5HLhGqvVexwWbauFkdIAc172ekDDSf2rkf0DKLUdLKwpYrqZwvgR1DgZht0MV0ByXB_iljH8X__0Vf6qvM6guKGygndli3gRgQ3mSqRGXsRt0eIJYXUIvqQc8zQ" data-title="Modern Lounge &amp; Marble Tables">
+        <img alt="Modern Lounge &amp; Marble Tables" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqB06JuxpU45fB-kw_BYOnvdE3TlXZOAHCb-zknD7BQBdL_kwpXhnxMaU2Udotl8ok2D-vqLQ5GOT2jq3sD4xBeGePkKaT3Gr9m98kt7CmEOp8B5aRa0AtZiYKSxKPWB1V_G_yEVoC5HLhGqvVexwWbauFkdIAc172ekDDSf2rkf0DKLUdLKwpYrqZwvgR1DgZht0MV0ByXB_iljH8X__0Vf6qvM6guKGygndli3gRgQ3mSqRGXsRt0eIJYXUIvqQc8zQ">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Modern Lounge &amp; Marble Tables</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Cream sectional sofa, nested marble coffee tables, and sheer curtain light.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 4: Master Bedroom -->
+      <div class="gallery-item bedroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="Bedrooms" data-desc="Plush velvet headboard with fresh white bedding." data-src="https://lh3.googleusercontent.com/aida/AEtjO1WvA-7aBwdxAqbQGqJKLUWlB5gsvUFIu9D_Rt_yiSDuIX-DsxK3sKivzdG4BYExuVsXWQPXD2fWI_wicn6-S1jCbZWd2nKWZEi1WR6O1mO6EV-n5nATilNbNqAp0u67RXpo9zXTWZDfwfW6Fq41cupcsdlb3ymugBpxr5PQKFvj3dAx46GZrXiYK8YSqNTSPFGFn97jFbCn_3Nk1miCbIInA7lsPLPBzf6ie5zJhM99Gwcai0yF1QBwdd3TH9Ve1DhnlDrfHk3ghA" data-title="Master Bedroom">
+        <img alt="Master Bedroom" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WvA-7aBwdxAqbQGqJKLUWlB5gsvUFIu9D_Rt_yiSDuIX-DsxK3sKivzdG4BYExuVsXWQPXD2fWI_wicn6-S1jCbZWd2nKWZEi1WR6O1mO6EV-n5nATilNbNqAp0u67RXpo9zXTWZDfwfW6Fq41cupcsdlb3ymugBpxr5PQKFvj3dAx46GZrXiYK8YSqNTSPFGFn97jFbCn_3Nk1miCbIInA7lsPLPBzf6ie5zJhM99Gwcai0yF1QBwdd3TH9Ve1DhnlDrfHk3ghA">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Bedrooms</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Master Bedroom</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Plush velvet headboard with fresh white bedding.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Lounge & Fluted Accent -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Spacious cream L-shaped sofa with accent cushions and fluted feature wall." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuD629vUuE6geqU84kRQYRQ4__wus9DPUhgiN5hlFWD1d-rIvxNXVdUWdoX_jYYcf_wENrYww7xStMvkqO07p5qj0x4jZWlWM-zD8bkmYG05fDXXsDOnRetJAsIw6Aa3jvaU0EyODMXbhYCXjSV3OiofOwGpFvqdEgmQLfStRnHJnF4uWs2CCQmsc-L3p-dFNQJXgeXXI0a9OQ36pa8pAGN-xR6L7NIkoK2NvZrxEpCsFY9mfMklLaUAg50wvwilnEWf7TQ" data-title="Lounge &amp; Fluted Accent">
+        <img alt="Lounge &amp; Fluted Accent" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD629vUuE6geqU84kRQYRQ4__wus9DPUhgiN5hlFWD1d-rIvxNXVdUWdoX_jYYcf_wENrYww7xStMvkqO07p5qj0x4jZWlWM-zD8bkmYG05fDXXsDOnRetJAsIw6Aa3jvaU0EyODMXbhYCXjSV3OiofOwGpFvqdEgmQLfStRnHJnF4uWs2CCQmsc-L3p-dFNQJXgeXXI0a9OQ36pa8pAGN-xR6L7NIkoK2NvZrxEpCsFY9mfMklLaUAg50wvwilnEWf7TQ">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Lounge &amp; Fluted Accent</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Spacious cream L-shaped sofa with accent cushions and fluted feature wall.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Serene Living Space -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Warmly lit lounge area with ambient lighting and plush sectional seating." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxfmesThytuRGwlvRaucOU0tQ_Y5FiE76-uI8D25MvGEIM5dAMHuBUQX1vD8_cdNxHoQwJWWbrgazo88ETq8QGStugvdPbjckfc5AtOljSjF5PeaHQR2nP4lp1inwsnbUSmR_Mtey7qmEyKuj-ORJ52KE5JdePIFqG_AYQfYZjuQKiN7IuLF5cTcLBLxL-QsZpQQmizdPItS7uMyklnNj9Aj0UKVfpYKN4Eht5p1bAULb4FySvEqrJgPfoayvPUF8RTss" data-title="Serene Living Space">
+        <img alt="Serene Living Space" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxfmesThytuRGwlvRaucOU0tQ_Y5FiE76-uI8D25MvGEIM5dAMHuBUQX1vD8_cdNxHoQwJWWbrgazo88ETq8QGStugvdPbjckfc5AtOljSjF5PeaHQR2nP4lp1inwsnbUSmR_Mtey7qmEyKuj-ORJ52KE5JdePIFqG_AYQfYZjuQKiN7IuLF5cTcLBLxL-QsZpQQmizdPItS7uMyklnNj9Aj0UKVfpYKN4Eht5p1bAULb4FySvEqrJgPfoayvPUF8RTss">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Serene Living Space</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Warmly lit lounge area with ambient lighting and plush sectional seating.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 6: Equipped Kitchen -->
+      <div class="gallery-item kitchen group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Kitchen" data-desc="Gas cooker, oven, granite counters, and cookware." data-src="https://lh3.googleusercontent.com/aida/AEtjO1VB9RFJCIF80V92SKAJYEPE95rTOUNAB3uJ2LiKie6fRZzF_eVaKTBjtPqMPpcGhjWKWz9mAYONGiBF22nbZjHJpKx_NhyIXQmL2ABMbKzosb3Orp99f3vw1zSfpDl7HASo6cbgln3Py0huGrFbk4YvNOqAlvO3qnpydHCXvV32F5_zHUeo05LriVFZiv0zCWvOyUgj424F9aSfUvAqwZ3jaWbM2QDsttUqzzPYSkFPbL8deLRRVS5J60mhEyyQPVJ5Ik34rGmjVCY" data-title="Equipped Kitchen">
+        <img alt="Equipped Kitchen" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VB9RFJCIF80V92SKAJYEPE95rTOUNAB3uJ2LiKie6fRZzF_eVaKTBjtPqMPpcGhjWKWz9mAYONGiBF22nbZjHJpKx_NhyIXQmL2ABMbKzosb3Orp99f3vw1zSfpDl7HASo6cbgln3Py0huGrFbk4YvNOqAlvO3qnpydHCXvV32F5_zHUeo05LriVFZiv0zCWvOyUgj424F9aSfUvAqwZ3jaWbM2QDsttUqzzPYSkFPbL8deLRRVS5J60mhEyyQPVJ5Ik34rGmjVCY">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Kitchen</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Equipped Kitchen</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Gas cooker, oven, granite counters, and cookware.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Kitchen & Laundry Area -->
+      <div class="gallery-item kitchen group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Kitchen" data-desc="Fully equipped kitchen space and modern washing machine." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEZVfKPTBUmevYFPs5a-6yuKvJ1Tu46ckLraXxwLv78oALHYdRTAU8Xr2V5JY-RzHpoaZT-ZJlSbTRMp0i0ZgZWwVFpHhTuZB1OreGuG6AoK7KM_59U5TWI-SEswYylnYOizC8lEyw0U-_QFd0Aso8hIpHGOrlyI_7qKP0ERVpwDASo1Ks3pvCe0IWUddyt9nkt-ko3ef12OoPazBRVOtNNBBWzt7YqZlcf-9IqYxtDeWZE9qFLvumogD1wyDyZgWtG4" data-title="Kitchen &amp; Laundry Area">
+        <img alt="Kitchen &amp; Laundry Area" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEZVfKPTBUmevYFPs5a-6yuKvJ1Tu46ckLraXxwLv78oALHYdRTAU8Xr2V5JY-RzHpoaZT-ZJlSbTRMp0i0ZgZWwVFpHhTuZB1OreGuG6AoK7KM_59U5TWI-SEswYylnYOizC8lEyw0U-_QFd0Aso8hIpHGOrlyI_7qKP0ERVpwDASo1Ks3pvCe0IWUddyt9nkt-ko3ef12OoPazBRVOtNNBBWzt7YqZlcf-9IqYxtDeWZE9qFLvumogD1wyDyZgWtG4">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Kitchen</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Kitchen &amp; Laundry Area</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Fully equipped kitchen space and modern washing machine.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 7: Marble Vanity & Shower -->
+      <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Bathroom" data-desc="Gold-veined marble walls with vanity sink and shower." data-src="https://lh3.googleusercontent.com/aida/AEtjO1V240cOnyYHXxov2D5GrA3qZglbigHzL5ualjdus9b0HWS873kwyHXo5GSRlW7RAIk50JCRCIcRphsMHXB0NUeqajF-g_gr__qhJANauU3pmxV3ypMMlLX6lWfiCSGi3PFXhNelRPDAQYg-ooxdlaRfrNgOUQ8mu1LpDl0shE5Gx-yRd0quYroUYgnexrKqVNATmBjqBCFbXkmK-Stk9F_fiAg9nZ8p8hYqTSFx3Nx55TCTcCBYvAur4QWhvv-Dwu2R-1VwCWMF8Q" data-title="Marble Vanity &amp; Shower">
+        <img alt="Marble Vanity &amp; Shower" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V240cOnyYHXxov2D5GrA3qZglbigHzL5ualjdus9b0HWS873kwyHXo5GSRlW7RAIk50JCRCIcRphsMHXB0NUeqajF-g_gr__qhJANauU3pmxV3ypMMlLX6lWfiCSGi3PFXhNelRPDAQYg-ooxdlaRfrNgOUQ8mu1LpDl0shE5Gx-yRd0quYroUYgnexrKqVNATmBjqBCFbXkmK-Stk9F_fiAg9nZ8p8hYqTSFx3Nx55TCTcCBYvAur4QWhvv-Dwu2R-1VwCWMF8Q">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Marble Vanity &amp; Shower</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Gold-veined marble walls with vanity sink and shower.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Modern Vanity & Bath Space -->
+      <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Bathroom" data-desc="Sleek floating vanity with ceramic basin and bamboo accents." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFfAoYVrUmRsFiHK5hVb0v-PEVb3b9U4yFLKhgNWE6GRmi08FL3Qt2bIrcvJT8M7t39Q5QTuTGpCVzNak24WAh60jkoHZoVMzKhPHCGV7Da5FuBZXj253Oo_eUsvt9bAUo8sqwvm6zcBVShqcH4i9nOqEzZQ5GlfWoaD7NVe5gm8tGXMbgmYqP4rZy5U7yri41rW3kY991vzTYgCf2IVMcMlVVJ41ooUSdcC5Pv03xGKjS4I2qFvqruISdMF639Q3C0vg" data-title="Modern Vanity &amp; Bath Space">
+        <img alt="Modern Vanity &amp; Bath Space" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFfAoYVrUmRsFiHK5hVb0v-PEVb3b9U4yFLKhgNWE6GRmi08FL3Qt2bIrcvJT8M7t39Q5QTuTGpCVzNak24WAh60jkoHZoVMzKhPHCGV7Da5FuBZXj253Oo_eUsvt9bAUo8sqwvm6zcBVShqcH4i9nOqEzZQ5GlfWoaD7NVe5gm8tGXMbgmYqP4rZy5U7yri41rW3kY991vzTYgCf2IVMcMlVVJ41ooUSdcC5Pv03xGKjS4I2qFvqruISdMF639Q3C0vg">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Modern Vanity &amp; Bath Space</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Sleek floating vanity with ceramic basin and bamboo accents.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 8: Restroom -->
+      <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Bathroom" data-desc="Clean modern toilet with marble porcelain finish." data-src="https://lh3.googleusercontent.com/aida/AEtjO1Uf5PBkBbVopl_GGfEhGe65Rt6zxgggKd4Hn86_unwwLlQNXV8RHeQ9eD1zQ-GQ3oxelSVnowDYTLWD2ufAq_mhZEHLmAi59LDSfFgzaHE5JmxSilDuQWoVea8KhxF7SMYVk0OS5dBAZmoMgIqmGsOoRPv6MnI3HX_vEvqs0K4FlbbqT_h9y3UB6cWvyo8LCR1DYcFT8G5gCHGyVuI2YipC6M5T3XSU6vo3HaZuu3ZGrfJhKeO2Qb_eb6FxKFTLK4qJJYaG4wYnTfQ" data-title="Restroom">
+        <img alt="Restroom" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Uf5PBkBbVopl_GGfEhGe65Rt6zxgggKd4Hn86_unwwLlQNXV8RHeQ9eD1zQ-GQ3oxelSVnowDYTLWD2ufAq_mhZEHLmAi59LDSfFgzaHE5JmxSilDuQWoVea8KhxF7SMYVk0OS5dBAZmoMgIqmGsOoRPv6MnI3HX_vEvqs0K4FlbbqT_h9y3UB6cWvyo8LCR1DYcFT8G5gCHGyVuI2YipC6M5T3XSU6vo3HaZuu3ZGrfJhKeO2Qb_eb6FxKFTLK4qJJYaG4wYnTfQ">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Restroom</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Clean modern toilet with marble porcelain finish.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Peaceful Guest Bedroom -->
+      <div class="gallery-item bedroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="Bedrooms" data-desc="Plush double bed with crisp white linens and calming blue accents." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuAKP4XnDFnRhVZ-XswxMYpp3R1GyHenGEUrKKGkwg_JyHaLIaowXTI90bVLyMF0boENgdvFtj_Ubh2flzAUWeqzw8VuQZ1iARKaYFSy9Q25Zw-G4q8sEjrPmqazzJl1VQ90HRc1qZ_pg5toDwUvkbXR7oesduQdIxhzpo8CtGitF51T6MXdLOGP0VA-zpbr-xGibglippV9qAUh6lKAA8QmEfyuFVPADi7vcdyt1cWAvXrhlYFfc3-jflDFXPzQoUxg4" data-title="Peaceful Guest Bedroom">
+        <img alt="Peaceful Guest Bedroom" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuAKP4XnDFnRhVZ-XswxMYpp3R1GyHenGEUrKKGkwg_JyHaLIaowXTI90bVLyMF0boENgdvFtj_Ubh2flzAUWeqzw8VuQZ1iARKaYFSy9Q25Zw-G4q8sEjrPmqazzJl1VQ90HRc1qZ_pg5toDwUvkbXR7oesduQdIxhzpo8CtGitF51T6MXdLOGP0VA-zpbr-xGibglippV9qAUh6lKAA8QmEfyuFVPADi7vcdyt1cWAvXrhlYFfc3-jflDFXPzQoUxg4">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Bedrooms</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Peaceful Guest Bedroom</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Plush double bed with crisp white linens and calming blue accents.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Garden Walkway & Pathway -->
+      <div class="gallery-item surroundings group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="Compound" data-desc="Tranquil stone bungalow exterior with lush greenery and walkway." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNApfFhRT3VoUZB_5wbHbqMzM03OtwGSZkMxF3de5LSd26SWyzyNPNGP6llgayp-9eqOSwVQlthtnuDvdD9tEBeEbHTRrneso-OVw4A1k5tc-b4FMwYXB37-W43OVh8pNk2OaFt3qMW3w_6yWojkHsmZIco3AnMoZiZycsHgNkucU4Jct4OTjwGSRS6Mqg6RrxuqUzGbYPFLfvdRJvjlR95fz8Rcz-0g0C-cagf50ToKZ2KokdpwiwV1lNgjv98zcdIH0" data-title="Garden Walkway &amp; Pathway">
+        <img alt="Garden Walkway &amp; Pathway" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNApfFhRT3VoUZB_5wbHbqMzM03OtwGSZkMxF3de5LSd26SWyzyNPNGP6llgayp-9eqOSwVQlthtnuDvdD9tEBeEbHTRrneso-OVw4A1k5tc-b4FMwYXB37-W43OVh8pNk2OaFt3qMW3w_6yWojkHsmZIco3AnMoZiZycsHgNkucU4Jct4OTjwGSRS6Mqg6RrxuqUzGbYPFLfvdRJvjlR95fz8Rcz-0g0C-cagf50ToKZ2KokdpwiwV1lNgjv98zcdIH0">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Compound</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Garden Walkway &amp; Pathway</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Tranquil stone bungalow exterior with lush greenery and walkway.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Greenery & Courtyard Garden -->
+      <div class="gallery-item surroundings group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="Compound" data-desc="Peaceful foliage and private natural surroundings in Kasarani." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGC30caSeLPk7S8JVE9yv1cexk8Dw1x7b4F35na949bMwMq3n4IPE9DH9YdUDBQ7n0xiMKAlKHOSVK6h17o9V_X8fms-LfVP7eaKfiZQkaEOd-E-d1Jkr0tHQ1-FcLBk-ID2Jyu9h-_x4zj64Yi-ZX_iKpJNctBqL4S2OQOwDpeyxGQHFwLX7bzxFRYOaKcezMdr6l41BsIENthCAtfgMSXfmfASTOZ7KUAJJeDqQwLKSsIMk6Dr8SF9gjo3AQTgs3318" data-title="Greenery &amp; Courtyard Garden">
+        <img alt="Greenery &amp; Courtyard Garden" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGC30caSeLPk7S8JVE9yv1cexk8Dw1x7b4F35na949bMwMq3n4IPE9DH9YdUDBQ7n0xiMKAlKHOSVK6h17o9V_X8fms-LfVP7eaKfiZQkaEOd-E-d1Jkr0tHQ1-FcLBk-ID2Jyu9h-_x4zj64Yi-ZX_iKpJNctBqL4S2OQOwDpeyxGQHFwLX7bzxFRYOaKcezMdr6l41BsIENthCAtfgMSXfmfASTOZ7KUAJJeDqQwLKSsIMk6Dr8SF9gjo3AQTgs3318">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Compound</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Greenery &amp; Courtyard Garden</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Peaceful foliage and private natural surroundings in Kasarani.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 10: Gated Parking & Entry -->
+      <div class="gallery-item surroundings group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="Compound" data-desc="Secure perimeter wall and spacious parking area." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuATjkaFTJz6jKc-qGq42etNQ8taWVwmar1mceMuvaFQPDzGnosiDUuRw7as2DV_eysgxwUi-2kgT0Ip1L7TlHQudu4rbP2sQlvSpq4WGn0bG59MaSFB4iZT7rO7W_pDeInmOwp7RbhA2apE_pJZiDGVLDMXy8ds-vIm1WkljZJzxI0-iEBuZKNyCvggOUX7Zaq-rMUr1czUfnIvsm_3TBVipgNb1wUPVjIcZlPcvK_BDpzcWunAaVrA4xUpBGXgnyvXaMM" data-title="Gated Parking &amp; Entry">
+        <img alt="Gated Parking &amp; Entry" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATjkaFTJz6jKc-qGq42etNQ8taWVwmar1mceMuvaFQPDzGnosiDUuRw7as2DV_eysgxwUi-2kgT0Ip1L7TlHQudu4rbP2sQlvSpq4WGn0bG59MaSFB4iZT7rO7W_pDeInmOwp7RbhA2apE_pJZiDGVLDMXy8ds-vIm1WkljZJzxI0-iEBuZKNyCvggOUX7Zaq-rMUr1czUfnIvsm_3TBVipgNb1wUPVjIcZlPcvK_BDpzcWunAaVrA4xUpBGXgnyvXaMM">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">Compound</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Gated Parking &amp; Entry</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Secure perimeter wall and spacious parking area.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 11: Dining & Work Corner -->
+      <div class="gallery-item living group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Living Room" data-desc="Glass table with gold accent legs, cozy armchairs, and geometric rug." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwTStALJTyyWf4DKBuqI8eienQjTWGbij6tJXbW70yhn5oYeBkKrkuPC_eTIn2Xg_fiLN8Y6KI8yq0kYL6raUIh4gkGLjhq-pm3qvsVPiekYm5EkXibhjeNFZVPr2e00kL8ouz029jxX6UeNUNJLRa6OenpSK58uNISurTRD89TCjWFZuSBiuHqyEloz-SrA3mkwkmvlONAJXEE75pEaVmyClqiaZ-9JCvlyX-O81uiG0wapLEshbCB65mL3K3gzatoj0" data-title="Dining &amp; Work Corner">
+        <img alt="Dining &amp; Work Corner" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwTStALJTyyWf4DKBuqI8eienQjTWGbij6tJXbW70yhn5oYeBkKrkuPC_eTIn2Xg_fiLN8Y6KI8yq0kYL6raUIh4gkGLjhq-pm3qvsVPiekYm5EkXibhjeNFZVPr2e00kL8ouz029jxX6UeNUNJLRa6OenpSK58uNISurTRD89TCjWFZuSBiuHqyEloz-SrA3mkwkmvlONAJXEE75pEaVmyClqiaZ-9JCvlyX-O81uiG0wapLEshbCB65mL3K3gzatoj0">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Living Room</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Dining &amp; Work Corner</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Glass table with gold accent legs, cozy armchairs, and geometric rug.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- Item 12: Kitchenette & Refrigeration -->
+      <div class="gallery-item kitchen group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Kitchen" data-desc="Silver refrigerator, prep cabinetry, microwave, and open shelving." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2x5EKlZybgCzalkxD2ztkwB4kjPfWQUUqbcAHJ7I99CUg8BZ-afpivUE-S_SoTY1D7aEOdWdlmH5WKOTEQjqqJh4FLjg8g_ywXh2ELb3DRRuLSl9q7-vzMN_zeEYtP9Y5Rj-d00hKjcgHvNfBabybfUOOrxbEr8MsxU0XPKlV7RWG4NpApAw0rK7mbjHWpd8xBFqr8pFkZTqnzRMd4NLPgfHdHvwG2vxu7hXNs6GJk7wO-QZjVw7hVqmBvP5LNQxO0lE" data-title="Kitchenette &amp; Refrigeration">
+        <img alt="Kitchenette &amp; Refrigeration" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2x5EKlZybgCzalkxD2ztkwB4kjPfWQUUqbcAHJ7I99CUg8BZ-afpivUE-S_SoTY1D7aEOdWdlmH5WKOTEQjqqJh4FLjg8g_ywXh2ELb3DRRuLSl9q7-vzMN_zeEYtP9Y5Rj-d00hKjcgHvNfBabybfUOOrxbEr8MsxU0XPKlV7RWG4NpApAw0rK7mbjHWpd8xBFqr8pFkZTqnzRMd4NLPgfHdHvwG2vxu7hXNs6GJk7wO-QZjVw7hVqmBvP5LNQxO0lE">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Kitchen</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Kitchenette &amp; Refrigeration</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Silver refrigerator, prep cabinetry, microwave, and open shelving.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+      <!-- New Item: Vanity & Washroom Hallway -->
+      <div class="gallery-item bathroom group relative cursor-pointer h-[480px] rounded-2xl overflow-hidden bg-surface-container shadow-md border border-black/5 transition-custom" data-category="The Bathroom" data-desc="Modern floating vanity with mirror storage, pendant lighting, and laundry hamper." data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiFdaup2ycjpDKWBYGOiKE5Q2k5XStgJo6D3BjcgC1fPYBAe-AwvLkqvLsnk3pVmCbWJ4BNQwpTRRLTgu370gQiadYfg9CAQa6etXnezvzRgV2LEuIDSmS5SAAuxiSMcyWHiC8N6xO_Ngw2K8iS_qKWlLm7COumOFAfWBaQsVwqYZ9fLgIGxxcrq2o3B5LvQ-_uvNYZEt9Ljn6R7Say918isQLTw11f9OPOs4xr9jzxj4qdBABPVKi6Jt8JSfp1xGoY5c" data-title="Vanity &amp; Washroom Hallway">
+        <img alt="Vanity &amp; Washroom Hallway" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiFdaup2ycjpDKWBYGOiKE5Q2k5XStgJo6D3BjcgC1fPYBAe-AwvLkqvLsnk3pVmCbWJ4BNQwpTRRLTgu370gQiadYfg9CAQa6etXnezvzRgV2LEuIDSmS5SAAuxiSMcyWHiC8N6xO_Ngw2K8iS_qKWlLm7COumOFAfWBaQsVwqYZ9fLgIGxxcrq2o3B5LvQ-_uvNYZEt9Ljn6R7Say918isQLTw11f9OPOs4xr9jzxj4qdBABPVKi6Jt8JSfp1xGoY5c">
+        <div class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full overflow-hidden bg-primary/80 backdrop-blur-md border border-secondary/40 shadow-sm p-0.5 opacity-90">
+          <img alt="Cedar Haven Logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold mb-1">The Bathroom</span>
+          <h3 class="font-serif-brand text-2xl text-white mb-2">Vanity &amp; Washroom Hallway</h3>
+          <p class="text-xs text-white/80 line-clamp-2">Modern floating vanity with mirror storage, pendant lighting, and laundry hamper.</p>
+          <div class="mt-4 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+            <span class="">Enlarge View</span>
+            <span class="material-symbols-outlined text-sm">fullscreen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CTA Card -->
+    <div class="w-full mt-20 p-8 sm:p-12 rounded-3xl bg-primary text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl" style="background-color: #1a3c34; border: 1px solid rgba(197, 160, 89, 0.25);">
+      <div class="max-w-xl text-center md:text-left">
+        <h2 class="font-serif-brand text-3xl sm:text-4xl font-normal tracking-tight text-white mb-3" style="font-style: italic; color: #e9c176;">
+          Ready to plan your peaceful stay?
+        </h2>
+        <p class="text-sm sm:text-base text-white/80 font-normal leading-relaxed">
+          Reach out directly to book your dates or negotiate terms with our concierge. Located in a tranquil, secure area of Kasarani, Nairobi.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0 w-full sm:w-auto">
+        <a class="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-secondary hover:bg-secondary-gold text-primary font-semibold text-xs tracking-wider transition-all duration-300 shadow-lg" href="https://wa.me/254142202815" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="">RESERVE VIA WHATSAPP</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider transition-all duration-300" href="contact.html">
+          <span class="">CONTACT DETAILS</span>
+        </a>
+      </div>
+    </div>
+  </main>
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8" id="lightbox">
+    <button aria-label="Close modal" class="absolute top-6 right-6 sm:top-8 sm:right-8 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 hover:text-secondary flex items-center justify-center transition-colors z-20" id="lightbox-close">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+    <div class="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center justify-center">
+      <img alt="Enlarged view" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl" id="lightbox-img">
+      <div class="mt-4 text-center text-white">
+        <span class="text-xs uppercase tracking-widest text-secondary block font-medium" id="lightbox-cat"></span>
+        <h4 class="font-serif-brand text-xl sm:text-2xl mt-1" id="lightbox-title" style="font-style: italic; color: #e9c176;"></h4>
+        <p class="text-xs text-white/70 mt-1 max-w-lg mx-auto font-sans-brand" id="lightbox-desc"></p>
+      </div>
     </div>
   </div>
-</footer>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full py-12 mt-auto border-t border-secondary/40 shadow-inner" style="background: linear-gradient(135deg, #f5ebd7 0%, #ecd7ab 35%, #dfbe7e 75%, #cfab63 100%);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-9 h-9 rounded-full overflow-hidden border border-primary/30 flex-shrink-0 shadow-sm">
+          <img alt="Cedar Haven Emblem" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V9PID3jIxhjgkwd63QlJX4I2OYkapr5B0oT6zpfTt4ogMTh_rfgBGmztknGlBlZOpL7q7EjaS14fPZ-ZHNmp4CjJLE6A5AH8xHQxg7Fzvgd3JwLA2Kf2GKarJTXtT6EQleQ0u8JnVaR570TnDPqFSCMtRKEL9voUDzMA24bQNngZjZDs9Yx8CaaF5qOWhS5oGPqt3TNBOX2KEKEs_weUu7NZy4jo-gGHcHd8ZIndUe0DoXAxB4yeUoT7P60qrj2LI4EiecITX-f28">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-brand text-lg tracking-wider uppercase text-primary font-bold">Cedar Haven</span>
+          <span class="text-xs text-primary/80 font-sans-brand font-medium">© 2026. All rights reserved.</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-primary/90 font-sans-brand font-medium">
+        <a class="hover:text-primary hover:underline transition-colors" href="contact.html">Kasarani, Nairobi</a>
+        <span class="text-primary/50">•</span>
+        <a class="hover:text-primary hover:underline transition-colors font-semibold" href="https://wa.me/254142202815">+254 142 202 815</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a aria-label="TikTok" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" href="https://www.tiktok.com/@cedar.haven.kasar?_r=1&amp;_t=ZS-9A3sqwBTc3u" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-tiktok text-sm"></i>
+        </a>
+        <a aria-label="Instagram" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" href="https://www.instagram.com/cedar.haven_" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-instagram text-sm"></i>
+        </a>
+        <a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" href="https://wa.me/254142202815" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+        </a>
+        <a aria-label="Email Cedar Haven" class="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 flex items-center justify-center transition-all duration-300 shadow-sm" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cedar.haven.ke@gmail.com" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-sm">mail</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
 
-<!-- ==================== SCRIPTS ==================== -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+      /* ---------- 1. MOBILE SIDEBAR ---------- */
+      const openBtn  = document.getElementById('sidebar-open');
+      const closeBtn = document.getElementById('sidebar-close');
+      const sidebar  = document.getElementById('mobile-sidebar');
+      const overlay  = document.getElementById('mobile-overlay');
+      const body     = document.body;
 
-    /* ---------- 1. MOBILE SIDEBAR ---------- */
-    const openBtn  = document.getElementById('sidebar-open');
-    const closeBtn = document.getElementById('sidebar-close');
-    const sidebar  = document.getElementById('mobile-sidebar');
-    const overlay  = document.getElementById('mobile-overlay');
-    const body     = document.body;
+      function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.classList.add('open');
+        body.classList.add('sidebar-open');
+        openBtn.setAttribute('aria-expanded', 'true');
+      }
 
-    function openSidebar() {
-      sidebar.classList.add('open');
-      overlay.classList.add('open');
-      body.classList.add('sidebar-open');
-      openBtn.setAttribute('aria-expanded', 'true');
-    }
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('open');
+        body.classList.remove('sidebar-open');
+        openBtn.setAttribute('aria-expanded', 'false');
+      }
 
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('open');
-      body.classList.remove('sidebar-open');
-      openBtn.setAttribute('aria-expanded', 'false');
-    }
+      if (openBtn)  openBtn.addEventListener('click', openSidebar);
+      if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+      if (overlay)  overlay.addEventListener('click', closeSidebar);
 
-    if (openBtn)  openBtn.addEventListener('click', openSidebar);
-    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
-    if (overlay)  overlay.addEventListener('click', closeSidebar);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) closeSidebar();
+      });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && sidebar.classList.contains('open')) closeSidebar();
-    });
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setTimeout(closeSidebar, 150));
+      });
 
-    sidebar.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => setTimeout(closeSidebar, 150));
-    });
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (window.innerWidth >= 768 && sidebar.classList.contains('open')) closeSidebar();
+        }, 150);
+      });
 
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        if (window.innerWidth >= 768 && sidebar.classList.contains('open')) closeSidebar();
-      }, 150);
-    });
+      /* ---------- 2. GALLERY FILTERS ---------- */
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
 
-    /* ---------- 2. GALLERY FILTERS ---------- */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white', 'shadow-sm');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant');
 
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-primary', 'text-white', 'shadow-sm');
-          b.classList.add('text-on-surface-variant');
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 40);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.96)';
+              setTimeout(() => { item.style.display = 'none'; }, 250);
+            }
+          });
         });
-        btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
-        btn.classList.remove('text-on-surface-variant');
+      });
 
-        galleryItems.forEach(item => {
-          if (filter === 'all' || item.classList.contains(filter)) {
-            item.style.display = 'block';
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
-            }, 40);
-          } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.96)';
-            setTimeout(() => { item.style.display = 'none'; }, 250);
-          }
+      /* ---------- 3. LIGHTBOX ---------- */
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxCat = document.getElementById('lightbox-cat');
+      const lightboxDesc = document.getElementById('lightbox-desc');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-src');
+          const title = item.getAttribute('data-title') || '';
+          const cat = item.getAttribute('data-category') || '';
+          const desc = item.getAttribute('data-desc') || '';
+
+          lightboxImg.src = src;
+          lightboxTitle.textContent = title;
+          lightboxCat.textContent = cat;
+          lightboxDesc.textContent = desc;
+
+          lightbox.classList.remove('opacity-0', 'pointer-events-none');
+          lightbox.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
         });
       });
-    });
 
-    /* ---------- 3. LIGHTBOX ---------- */
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxCat = document.getElementById('lightbox-cat');
-    const lightboxDesc = document.getElementById('lightbox-desc');
-    const lightboxClose = document.getElementById('lightbox-close');
+      const closeLightbox = () => {
+        lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+        lightbox.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxImg.removeAttribute('src'); }, 300);
+      };
 
-    galleryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const src = item.getAttribute('data-src');
-        const title = item.getAttribute('data-title') || '';
-        const cat = item.getAttribute('data-category') || '';
-        const desc = item.getAttribute('data-desc') || '';
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
 
-        lightboxImg.src = src;
-        lightboxTitle.textContent = title;
-        lightboxCat.textContent = cat;
-        lightboxDesc.textContent = desc;
-
-        lightbox.classList.remove('opacity-0', 'pointer-events-none');
-        lightbox.classList.add('opacity-100', 'pointer-events-auto');
-        document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('opacity-100')) closeLightbox();
       });
+
     });
-
-    const closeLightbox = () => {
-      lightbox.classList.remove('opacity-100', 'pointer-events-auto');
-      lightbox.classList.add('opacity-0', 'pointer-events-none');
-      document.body.style.overflow = '';
-      setTimeout(() => { lightboxImg.removeAttribute('src'); }, 300);
-    };
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightbox) {
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-      });
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('opacity-100')) closeLightbox();
-    });
-
-  });
-</script>
-
+  </script>
 </body>
 </html>
