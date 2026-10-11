@@ -56,8 +56,8 @@
   </script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <style>
     /* ---------- Sharpened Fixed Background ---------- */
@@ -207,11 +207,11 @@
             <div class="mb-6">
               <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#c5a059]">Share Your Story</span>
               <h3 class="font-serif text-2xl text-[#1a3c34] mt-1">Leave a Review</h3>
-              <p class="text-xs text-[#1a3c34]/70 mt-1">Your feedback publishes in real time and syncs across all visiting guests.</p>
+              <p class="text-xs text-[#1a3c34]/70 mt-1">Your review will be checked by our team and then shown to all visitors.</p>
               <div class="mt-3.5 flex items-start gap-2 p-2.5 rounded-xl bg-[#c5a059]/10 border border-[#c5a059]/30 text-[11px] text-[#1a3c34]/80 leading-normal">
-                <span class="material-symbols-outlined text-sm text-[#c5a059] shrink-0 mt-0.5">cloud_done</span>
-                <span><strong class="font-semibold text-[#1a3c34]">Live Cloud Sync:</strong> Submissions persist instantly across visitor devices via cloud database with automatic offline storage fallback. Real guest reviews stay synchronized across browsers.</span>
-              </div>
+                <span class="material-symbols-outlined text-sm text-[#c5a059] shrink-0 mt-0.5">verified</span>
+                <span>Reviews are moderated to keep this page genuine. After you submit, you'll see your own review right away, and everyone else sees it once approved.</span>
+            </div>
             </div>
 
             <form id="review-form" class="space-y-4">
@@ -510,6 +510,117 @@
       }
     });
   </script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, where, limit, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyD7Yr2taUtlKmERPoTvBNnxtpDfnz0Oh9U",
+    authDomain: "cedar-haven-a67ef.firebaseapp.com",
+    projectId: "cedar-haven-a67ef",
+    storageBucket: "cedar-haven-a67ef.firebasestorage.app",
+    messagingSenderId: "478940944506",
+    appId: "1:478940944506:web:7a2a2ed4fa499b6187c3c3"
+  };
+
+  const db = getFirestore(initializeApp(firebaseConfig));
+  const reviewsRef = collection(db, "reviews");
+
+  const form = document.getElementById("review-form");
+  const feed = document.getElementById("reviews-feed");
+  const badge = document.getElementById("review-count-badge");
+  const success = document.getElementById("submit-success");
+  const MINE_KEY = "cedar_haven_my_reviews";
+
+  const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+
+  const getMine = () => { try { return JSON.parse(localStorage.getItem(MINE_KEY) || "[]"); } catch { return []; } };
+  const saveMine = list => { try { localStorage.setItem(MINE_KEY, JSON.stringify(list)); } catch {} };
+
+  function cardHtml(r, pending) {
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+      stars += i <= r.rating
+        ? '<i class="fa-solid fa-star text-[#c5a059] text-xs"></i>'
+        : '<i class="fa-regular fa-star text-[#d4c5a9] text-xs"></i>';
+    }
+    return `
+      <div class="bg-white p-6 sm:p-7 rounded-2xl border border-[#1a3c34]/5 shadow-sm space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#1a3c34]/10 text-[#1a3c34] font-serif font-bold flex items-center justify-center text-sm border border-[#c5a059]/30">${esc(r.name.charAt(0).toUpperCase())}</div>
+            <div>
+              <h4 class="font-semibold text-sm text-[#1a3c34] leading-tight">${esc(r.name)}</h4>
+              <p class="text-xs text-[#1a3c34]/60">${esc(r.location || "Verified Sanctuary Guest")}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1">${stars}</div>
+        </div>
+        <p class="text-xs sm:text-sm text-[#1a3c34]/80 leading-relaxed pt-1 border-t border-[#1a3c34]/5">"${esc(r.message)}"</p>
+        <div class="flex items-center justify-between text-[11px] text-[#1a3c34]/50 pt-1">
+          <span>${pending ? "Awaiting approval (only you can see this)" : "Stayed at Cedar Haven"}</span>
+          <span>${esc(r.date || "")}</span>
+        </div>
+      </div>`;
+  }
+
+  async function loadReviews() {
+    let approved = [];
+    try {
+      const snap = await getDocs(query(reviewsRef, where("approved", "==", true), limit(50)));
+      approved = snap.docs.map(d => {
+        const x = d.data();
+        const ms = x.createdAt ? x.createdAt.toMillis() : 0;
+        return { id: d.id, ms, ...x,
+          date: ms ? new Date(ms).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "" };
+      }).sort((a, b) => b.ms - a.ms);
+    } catch (e) { console.error("Could not load reviews:", e); }
+
+    const approvedIds = new Set(approved.map(r => r.id));
+    const mine = getMine().filter(r => !approvedIds.has(r.id));
+    saveMine(mine);
+
+    const all = [...mine.map(r => cardHtml(r, true)), ...approved.map(r => cardHtml(r, false))];
+    const total = all.length;
+    badge.textContent = `${total} ${total === 1 ? "Review" : "Reviews"}`;
+    if (total) feed.innerHTML = all.join("");
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("reviewer-name").value.trim();
+    const location = document.getElementById("reviewer-location").value.trim();
+    const message = document.getElementById("reviewer-message").value.trim();
+    const rating = parseInt(document.getElementById("selected-rating").value || "5", 10);
+    if (!name || !message) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    try {
+      const ref = await addDoc(reviewsRef, {
+        name, location, rating, message, approved: false, createdAt: serverTimestamp()
+      });
+      const mine = getMine();
+      mine.unshift({ id: ref.id, name, location, rating, message,
+        date: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) });
+      saveMine(mine);
+      form.reset();
+      document.querySelector('#star-picker [data-rating="5"]').click();
+      success.textContent = "Thank you! Your review was submitted and will appear for everyone once approved.";
+      success.classList.remove("hidden");
+      setTimeout(() => success.classList.add("hidden"), 5000);
+      loadReviews();
+    } catch (err) {
+      console.error(err);
+      alert("Sorry, your review could not be submitted. Please try again.");
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  loadReviews();
+</script>
 </body>
 </html>
